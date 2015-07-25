@@ -3,22 +3,21 @@ app.directive('installApp', function() {
     restrict: 'E',
     scope: {
     },
-    templateUrl: 'js/directives/installApp.html'
-  };
+    templateUrl: 'js/directives/installApp.html',
+    link: function(scope, element, attrs) { 
+      scope.buttonText = "Install", 
+      scope.installed = false, 
 
- link: function(scope, element, attrs) { 
-    scope.buttonText = "Install", 
-    scope.installed = false, 
-
-    scope.download = function() { 
-      element.toggleClass('btn-active'); 
-      if(scope.installed) { 
-        scope.buttonText = "Install"; 
-        scope.installed = false; 
-      } else { 
-        scope.buttonText = "Uninstall"; 
-        scope.installed = true; 
+      scope.download = function() { 
+        element.toggleClass('btn-active'); 
+        if(scope.installed) { 
+          scope.buttonText = "Install"; 
+          scope.installed = false; 
+        } else { 
+          scope.buttonText = "Uninstall"; 
+          scope.installed = true; 
+        } 
       } 
-    } 
-  }
+    }
+  };
 });

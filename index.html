@@ -16,26 +16,30 @@
 
     <div class="main" ng-controller="MainController">
       <div class="container">
+        <div class="card" ng-repeat="eachGame in apps">
+          <app-info info="eachGame"></app-info>
+          <install-app></install-app>
+        </div>
         
-         <div class="card" ng-repeat="eachGame in apps">
-           <app-info info="eachGame"></app-info>
-         </div>
-
-         <div class="card"> 
-           <app-info info="move"></app-info> 
-         </div>
+        <div class="card"> 
+          <app-info info="move"></app-info>
+          <install-app></install-app>
+        </div>
 
         <div class="card">
           <app-info info="shutterbugg"></app-info>
+          <install-app></install-app>
         </div>
 
         <div class="card">
          <app-info info="gameboard"></app-info>
+         <install-app></install-app>
         </div>
-
+        
         <div class="card">
-         <app-info info="forecast"></app-info>
-        </div>
+          <app-info info="forecast"></app-info>
+          <install-app></install-app>
+        </div>        
       </div>
     </div>
 
