@@ -22,7 +22,7 @@
 
         <div ng-repeat="product in products" class="col-md-6">
           <div class="thumbnail">
-            <img ng-src="{{ product.cover }}">
+	    <img ng-src="{{ product.cover }}" height="320" width="243">
             <p class="title">{{ product.name }}</p>
             <p class="price">{{ product.price | currency }}</p>
             <p class="date">{{ product.pubdate | date }}</p>
